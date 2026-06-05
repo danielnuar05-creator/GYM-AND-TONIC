@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gym and Tonic</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <h2 class="logo">
+    🏋️ GYM <span>AND TONIC</span>
+  </h2>
+
+  <button class="nav active" onclick="irInicio(this)">
+    🏠 Inicio
+  </button>
+
+  <h3>CATÁLOGO</h3>
+
+  <button class="nav" onclick="irSeccion('rutinas',this)">
+    🔥 Rutinas
+  </button>
+
+  <button class="nav" onclick="irSeccion('consejos',this)">
+    💡 Consejos
+  </button>
+
+  <button class="nav" onclick="irSeccion('frases',this)">
+    ⚡ Motivación
+  </button>
+
+  <button class="nav" onclick="irSeccion('alimentacion',this)">
+    🥗 Alimentación
+  </button>
+
+  <button class="nav" onclick="irSeccion('top',this)">
+    🏆 Top ejercicios
+  </button>
+
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- INICIO -->
+<div id="inicio">
+
+<section class="hero">
+
+  <div class="hero-text">
+
+    <span class="badge">
+      🔥 FITNESS APP
+    </span>
+
+    <h1>
+      Tu mejor versión empieza aquí
+    </h1>
+
+    <p>
+      Explora rutinas, consejos, motivación y alimentación
+      para transformar tu cuerpo y tu mentalidad.
+    </p>
+
+    <div class="hero-buttons">
+      <button onclick="irSeccion('rutinas')" class="btn-primary">
+        Empezar
+      </button>
+
+      <button onclick="irSeccion('alimentacion')" class="btn-secondary">
+        Nutrición
+      </button>
+    </div>
+
+  </div>
+
+  <!-- TU LOGO -->
+  <img src="img/logo.png" class="hero-logo">
+
+</section>
+
+<!-- STATS -->
+<div class="stats">
+
+  <div class="stat">
+    <h2>+120</h2>
+    <p>Rutinas</p>
+  </div>
+
+  <div class="stat">
+    <h2>+50</h2>
+    <p>Consejos</p>
+  </div>
+
+  <div class="stat">
+    <h2>+300</h2>
+    <p>Usuarios</p>
+  </div>
+
+  <div class="stat">
+    <h2>24/7</h2>
+    <p>Motivación</p>
+  </div>
+
+</div>
+
+<h2 class="titulo">
+  Explora el catálogo
+</h2>
+
+<!-- CATÁLOGO -->
+<div class="catalogo">
+
+  <div onclick="irSeccion('rutinas')" class="card">
+    <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?q=80&w=1200">
+    <div class="card-info">
+      <h3>Rutinas</h3>
+      <p>Entrenamientos personalizados.</p>
+    </div>
+  </div>
+
+  <div onclick="irSeccion('consejos')" class="card">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200">
+    <div class="card-info">
+      <h3>Consejos</h3>
+      <p>Mejora tu rendimiento.</p>
+    </div>
+  </div>
+
+  <div onclick="irSeccion('frases')" class="card">
+    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200">
+    <div class="card-info">
+      <h3>Motivación</h3>
+      <p>Mentalidad ganadora.</p>
+    </div>
+  </div>
+
+  <div onclick="irSeccion('alimentacion')" class="card">
+    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200">
+    <div class="card-info">
+      <h3>Alimentación</h3>
+      <p>Nutrición fitness.</p>
+    </div>
+  </div>
+
+  <div onclick="irSeccion('top')" class="card">
+    <img src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?q=80&w=1200">
+    <div class="card-info">
+      <h3>Top ejercicios</h3>
+      <p>Los más efectivos.</p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<!-- CONTENIDO DINÁMICO -->
+<div id="seccion" style="display:none"></div>
+
+</main>
+</div>
+
+<!-- AUDIO -->
+<audio id="musica" controls>
+  <source src="https://media.vocaroo.com/mp3/1nZ2RIt3v7Iy" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", () => {
+
+  const audio = document.getElementById("musica");
+
+  document.body.addEventListener("click", () => {
+    audio.play();
+  }, { once: true });
+
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
